@@ -5,7 +5,7 @@
 
 SampleClass* s;
 
-int main(void){}
+int main(void){
 	init();
 	
 	s = new SampleClass();

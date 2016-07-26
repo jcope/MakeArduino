@@ -14,8 +14,7 @@ set AVRDIR="tools\avr"
 
 ::Set Tool Locations
 set AVRDUDE="C:\Program Files\WinAvr\bin\avrdude"
-::set AVRDUDEFLAGS=-pm328p -carduino -PCOM3 -b115200 -Uflash:w:%HEXFILE%:a
-set AVRDUDEFLAGS=-C%AVRDIR%\avrdude.conf -patmega328p -carduino -P\\.\COM6 -b115200 -D -Uflash:w:%HEXFILE%:a
+set AVRDUDEFLAGS=-C%AVRDIR%\avrdude.conf -patmega328p -carduino -P\\.\COM3 -b115200 -D -Uflash:w:%HEXFILE%:a
 
 ::Execute Commands
 echo %AVRDUDE% %AVRDUDEFLAGS%
