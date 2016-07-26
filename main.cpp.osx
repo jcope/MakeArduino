@@ -1,0 +1,28 @@
+/*****************************************
+
+ *****************************************
+ Purpose:
+ 
+ ****************************************/
+
+//System Includes
+#include <iostream> //cout
+
+//Program Includes
+#include <mod/someClass.h>
+
+using namespace std;
+
+
+int
+main( int argc, char* argv[] )
+{
+    someClass aClass;
+    aClass.setup();
+    cout<<"About to enter while loop..."<<endl;
+    while (1){
+        
+    }
+    return 0;
+}
+
