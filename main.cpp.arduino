@@ -1,14 +1,14 @@
 //Arduino Code
 #include <ArduinoCore/Arduino.h>
 //
-#include <someClass/someClass.h>
+#include <SampleClass/SampleClass.h>
 
-someClass* s;
+SampleClass* s;
 
 int main(void){}
 	init();
 	
-	s = new someClass();
+	s = new SampleClass();
 	
 	setup();
 	for (;;)

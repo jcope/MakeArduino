@@ -63,6 +63,9 @@ $(OBJDIR)/%.o : %.c $(OBJDIR)
 
 ${OBJDIR}:
 	@mkdir -p ${OBJDIR}
+	
+${__ROOTDIR}/$(LIBDIR):
+	@mkdir -p ${__ROOTDIR}/$(LIBDIR)
 
 $(LIBDIR):
 	@mkdir -p ${LIBDIR}
@@ -72,7 +75,7 @@ ${BINDIR}:
 
 
 ###LIBRARY RULES###
-$(LIBRARY): $(LIBDIR) $(OBJDIR) $(OBJECTS)
+$(LIBRARY): ${__ROOTDIR}/$(LIBDIR) $(LIBDIR) $(OBJDIR) $(OBJECTS)
 	$(LIB_BUILD)
 	@cp $(LIBDIR)/$(LIBRARY) ${__ROOTDIR}/$(LIBDIR)
 

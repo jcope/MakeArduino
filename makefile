@@ -23,21 +23,21 @@ PROGRAM_DEPENDENCIES = \
 	$(OBJDIR)/$(SOURCE:.cpp=.$(OBJEXT))
 
 PROGRAM_MODULES = \
-	${__ROOTDIR}/src/someClass
+	${__ROOTDIR}/src/SampleClass
 
 
 PROGRAM_LIBRARIES = \
-	-lsomeClass
+	-lSampleClass
 
 ifeq (${__TARGET},ARDUINO)
 
 PROGRAM_MODULES :=\
 	${__ROOTDIR}/src/3rdParty/Arduino/ArduinoCore\
 	${__ROOTDIR}/src/3rdParty/Arduino/SPI\
-	${__ROOTDIR}/src/someClass
+	${__ROOTDIR}/src/SampleClass
 
 PROGRAM_LIBRARIES := \
-	-lsomeClass\
+	-lSampleClass\
 	-lSPI\
 	-lArduinoCore
 endif
